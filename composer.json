@@ -1,0 +1,18 @@
+{
+  "name": "heropoo/pagination",
+  "description": "A pagination component",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Heropoo",
+      "email": "aiyouyou1000@163.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Moon\\Pagination\\": ""
+    }
+  }
+}

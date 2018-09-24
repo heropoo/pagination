@@ -23,9 +23,10 @@ class Pagination
         $this->showPages = $showPages;
         $this->pageVar = $pageVar;
         $this->page = !empty($_GET[$this->pageVar]) ? (int)$_GET[$this->pageVar] : 1;
-        $this->totalPage = $this->totalPage();
+        $this->totalPage = ceil($this->totalRows / $this->pageSize);
         $this->url = empty($url) ? $this->getPageUrl() : $url;
     }
+    
     protected function getPageUrl()
     {
         //获取当前页面地址
@@ -39,12 +40,20 @@ class Pagination
         }
         return $this->url;
     }
+
+    /**
+     * 获取当前页码
+     */
+    public function getCurrentPage(){
+        return $this->page;
+    }
+
     /**
      * 获取总页数
      */
-    public function totalPage()
+    public function getTotalPage()
     {
-        return ceil($this->totalRows / $this->pageSize);
+        return $this->totalPage;
     }
     /**
      * 获取分页 offset 参数

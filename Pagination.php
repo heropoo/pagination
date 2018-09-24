@@ -1,5 +1,6 @@
 <?php
-namespace Moon;
+namespace Moon\Pagination;
+
 /**
  * 分页类
  * @author TTT

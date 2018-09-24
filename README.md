@@ -2,6 +2,12 @@
 Pagination
 
 ## 使用方法
+
+install via composer
+```
+composer require heropoo/pagination
+```
+
 ```php
 $user_total = 100;
 $page_size = 10;

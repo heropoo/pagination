@@ -8,6 +8,10 @@ install via composer
 composer require heropoo/pagination
 ```
 
+## 示例
+
+![avatar](./20180612140806.png)
+
 ```php
 $user_total = 100;
 $page_size = 10;

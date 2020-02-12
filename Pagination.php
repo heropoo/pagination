@@ -39,14 +39,8 @@ class Pagination
 
     protected function makePageUrl($page)
     {
-        $url = $this->baseUrl;
-        if (empty($this->get)) {
-            $url .= "?{$this->pageVar}=" . $page;
-        } else {
-            $url = '?' . http_build_query($this->get);
-            $url .= "&{$this->pageVar}=" . $page;
-        }
-        return $url;
+        $this->get[$this->pageVar] = $page;
+        return $this->baseUrl . '?' . http_build_query($this->get);
     }
 
     /**
